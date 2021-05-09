@@ -1,0 +1,4 @@
+go-trade
+config/app.yaml
+vendor
+go.sum
