@@ -22,7 +22,8 @@ make build
 ```
 
 ## How to use the endpoint
-Create http request to POST `http://localhost:8080/calculate`
+### 1 calculate max profit
+Create http request to POST `http://localhost:8080/max-trade`
 using this body:
 ```
 {
@@ -32,5 +33,24 @@ using this body:
 
 and the response will be like this:
 ```
-{"max_profit":299992438}
+{
+  "max_profit":299992438
+}
+```
+### 2 unique string
+
+reate http request to POST `http://localhost:8080/unique-string`
+using this body:
+```
+{
+    "file_url":"https://gist.githubusercontent.com/Jekiwijaya/0b85de3b9ff551a879896dd78256e9b8/raw/e9d58da5d4df913ad62e6e8dd83c936090ee6ef4/gistfile1.txt"
+}
+```
+
+and the response will be like this:
+```
+{
+    "first_occurence": "sfgxclryzidpuvejaqbtwmhkno",
+    "smallest_lexicographical_order": "abcdefghijklmnopqrstuvwxyz"
+}
 ```
