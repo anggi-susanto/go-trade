@@ -34,12 +34,16 @@ using this body:
 and the response will be like this:
 ```
 {
-  "max_profit":299992438
+    "max_profit": 299994700,
+    "buy_hour": 11789,
+    "buy_price": 100004284,
+    "sell_hour": 19090,
+    "sell_price": 399998984
 }
 ```
 ### 2 unique string
 
-reate http request to POST `http://localhost:8080/unique-string`
+create http request to POST `http://localhost:8080/unique-string`
 using this body:
 ```
 {
@@ -54,3 +58,21 @@ and the response will be like this:
     "smallest_lexicographical_order": "abcdefghijklmnopqrstuvwxyz"
 }
 ```
+### 3 find H(n) of six
+
+create http request to POST `http://localhost:8080/factor-six`
+using this body:
+```
+{
+    "number":262144
+}
+```
+
+and the response will be like this:
+```
+{
+    "mathched_factor_count": 13208
+}
+```
+
+*note : on step 3 needed to refactor, it's the simplest way to find the matching factor. Need further refactor because submission time limit.

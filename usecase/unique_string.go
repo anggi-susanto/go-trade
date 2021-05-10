@@ -68,18 +68,10 @@ func UniqueString(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(response)
 }
 
-func FirstOccurence(str string) string {
-	result := ""
-	occurence := make([]bool, 256)
-
-	for i := 0; i < len(str); i++ {
-		char := str[i]
-		if !occurence[char] {
-			result += string(char)
-			occurence[char] = true
-		}
-	}
-	return result
+func FirstOccurence(s string) string {
+	r := []rune(s)
+	r = RemoveDuplicate(r)
+	return string(r)
 }
 
 func LexicoGraphically(s string) string {

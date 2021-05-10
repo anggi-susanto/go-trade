@@ -22,6 +22,7 @@ func handleRequests() {
 	router.HandleFunc("/", homePage)
 	router.HandleFunc("/max-trade", usecase.MaxTrade).Methods("POST")
 	router.HandleFunc("/unique-string", usecase.UniqueString).Methods("POST")
+	router.HandleFunc("/factor-six", usecase.FactorSixCount).Methods("POST")
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
 
